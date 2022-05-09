@@ -124,7 +124,6 @@ public class BinaryTreeExample
         return left_product * right_product * root.data;
     }
 
-    static int height =0;
     public static int heightOfTree(Node root)
     {
         if(root == null)
@@ -134,6 +133,46 @@ public class BinaryTreeExample
         int left_height = heightOfTree(root.left);
         int right_height = heightOfTree(root.right);
         return Math.max(left_height,right_height) +1;
+    }
+
+    public static boolean isIdentical(Node root, Node subTreeRoot)
+    {
+        if(subTreeRoot == null && root == null)
+        {
+            return true;
+        }
+        if(root == null || subTreeRoot == null)
+        {
+            return false;
+        }
+
+        if(root.data == subTreeRoot.data)
+        {
+            return isIdentical(root.left, subTreeRoot.left) && isIdentical(root.right, subTreeRoot.right);
+        }
+        return false;
+    }
+
+    public static boolean subTreeCheck(Node root, Node subTreeRoot)
+    {
+        if(subTreeRoot == null)
+        {
+            return true;
+        }
+        if(root == null)
+        {
+            return false;
+        }
+
+        if(root.data == subTreeRoot.data)
+        {
+            if(isIdentical(root, subTreeRoot))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static void main(String args[])
