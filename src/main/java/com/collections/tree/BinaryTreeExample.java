@@ -1,5 +1,8 @@
-package com.p1.collections.trees;
-import java.util.*;
+package com.collections.tree;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTreeExample
 {
     static class Node
