@@ -1,4 +1,4 @@
-package com.objectOriented.level1;
+package com.objectOriented.basics;
 
 public class DataTypes
 {

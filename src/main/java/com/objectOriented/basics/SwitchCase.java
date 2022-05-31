@@ -1,4 +1,6 @@
-package com.objectOriented.level1;
+package com.objectOriented.basics;
+
+import java.util.HashMap;
 
 public class SwitchCase
 {
