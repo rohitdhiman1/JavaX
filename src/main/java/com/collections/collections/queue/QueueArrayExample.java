@@ -1,4 +1,4 @@
-package com.p1.collections.queue;
+package com.collections.collections.queue;
 
 public class QueueArrayExample
 {
